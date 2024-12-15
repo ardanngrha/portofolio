@@ -19,16 +19,31 @@ export default function Header() {
     <div className="flex items-center w-full max-w-6xl px-4 py-4 mx-auto my-0 sm:my-4">
       <Menubar>
         <MenubarMenu>
-          <MenubarTrigger onClick={() => scrollToSection('home')}>Home</MenubarTrigger>
+          <MenubarTrigger 
+          className="text-xs sm:text-sm px-2 sm:px-3"
+          onClick={() => scrollToSection('home')}>
+            Home
+          </MenubarTrigger>
         </MenubarMenu>
         <MenubarMenu>
-          <MenubarTrigger onClick={() => scrollToSection('skills')}>Skills</MenubarTrigger>
+          <MenubarTrigger 
+          className="text-xs sm:text-sm px-2 sm:px-3"
+          onClick={() => scrollToSection('skills')}>Skills</MenubarTrigger>
         </MenubarMenu>
         <MenubarMenu>
-          <MenubarTrigger onClick={() => scrollToSection('projects')}>Projects</MenubarTrigger>
+          <MenubarTrigger 
+          className="text-xs sm:text-sm px-2 sm:px-3"
+          onClick={() => scrollToSection('projects')}>Projects</MenubarTrigger>
         </MenubarMenu>
         <MenubarMenu>
-          <MenubarTrigger onClick={() => scrollToSection('experiences')}>Experiences</MenubarTrigger>
+          <MenubarTrigger 
+          className="text-xs sm:text-sm px-2 sm:px-3"
+          onClick={() => scrollToSection('experiences')}>Experiences</MenubarTrigger>
+        </MenubarMenu>
+        <MenubarMenu>
+          <MenubarTrigger 
+          className="text-xs sm:text-sm px-2 sm:px-3"
+          onClick={() => scrollToSection('about')}>About</MenubarTrigger>
         </MenubarMenu>
       </Menubar>
 
