@@ -2,8 +2,8 @@ import { LuGithub, LuLinkedin, LuBookText } from "react-icons/lu";
 
 export default function Hello() {
   return (
-    <div className="">
-      <div className="text-center sm:text-left w-full">
+    <div className="w-full">
+      <div className="text-center sm:text-left ">
         <h1 className="text-4xl sm:text-5xl font-bold mb-4">Hi! 👋</h1>
         <h2 className="text-2xl sm:text-3xl mb-2">You can call me Ardan!</h2>
         <p className="text-lg sm:text-xl text-muted-foreground">

@@ -36,34 +36,34 @@ export default function Header() {
   };
 
   return (
-    <div className="flex items-center w-full max-w-6xl px-4 py-4 mx-auto">
+    <div className="flex items-center w-full max-w-6xl px-4 py-4 mx-auto justify-center">
       <Menubar>
         <a
-          className={`text-xs sm:text-sm px-2 sm:px-3 ${activeSection === "home" ? "font-bold" : ""}`}
+          className={`text-xs sm:text-sm px-1 sm:px-3 ${activeSection === "home" ? "font-bold" : ""}`}
           onClick={() => scrollToSection("home")}
         >
           Home
         </a>
         <a
-          className={`text-xs sm:text-sm px-2 sm:px-3 ${activeSection === "skills" ? "font-bold" : ""}`}
+          className={`text-xs sm:text-sm px-1 sm:px-3 ${activeSection === "skills" ? "font-bold" : ""}`}
           onClick={() => scrollToSection("skills")}
         >
           Skills
         </a>
         <a
-          className={`text-xs sm:text-sm px-2 sm:px-3 ${activeSection === "projects" ? "font-bold" : ""}`}
+          className={`text-xs sm:text-sm px-1 sm:px-3 ${activeSection === "projects" ? "font-bold" : ""}`}
           onClick={() => scrollToSection("projects")}
         >
           Projects
         </a>
         <a
-          className={`text-xs sm:text-sm px-2 sm:px-3 ${activeSection === "experiences" ? "font-bold" : ""}`}
+          className={`text-xs sm:text-sm px-1 sm:px-3 ${activeSection === "experiences" ? "font-bold" : ""}`}
           onClick={() => scrollToSection("experiences")}
         >
           Experiences
         </a>
         <a
-          className={`text-xs sm:text-sm px-2 sm:px-3 ${activeSection === "about" ? "font-bold" : ""}`}
+          className={`text-xs sm:text-sm px-1 sm:px-3 ${activeSection === "about" ? "font-bold" : ""}`}
           onClick={() => scrollToSection("about")}
         >
           About
