@@ -1,3 +1,5 @@
+"use client";
+
 import {
   Menubar,
   MenubarMenu,
@@ -17,16 +19,16 @@ export default function Header() {
     <div className="flex items-center w-full max-w-6xl px-4 py-4 mx-auto my-0 sm:my-4">
       <Menubar>
         <MenubarMenu>
-          <MenubarTrigger>Home</MenubarTrigger>
+          <MenubarTrigger onClick={() => scrollToSection('home')}>Home</MenubarTrigger>
         </MenubarMenu>
         <MenubarMenu>
-          <MenubarTrigger>Skills</MenubarTrigger>
+          <MenubarTrigger onClick={() => scrollToSection('skills')}>Skills</MenubarTrigger>
         </MenubarMenu>
         <MenubarMenu>
-          <MenubarTrigger>Projects</MenubarTrigger>
+          <MenubarTrigger onClick={() => scrollToSection('projects')}>Projects</MenubarTrigger>
         </MenubarMenu>
         <MenubarMenu>
-          <MenubarTrigger>Experiences</MenubarTrigger>
+          <MenubarTrigger onClick={() => scrollToSection('experiences')}>Experiences</MenubarTrigger>
         </MenubarMenu>
       </Menubar>
 
