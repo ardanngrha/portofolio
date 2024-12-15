@@ -1,52 +1,74 @@
 "use client";
 
-import {
-  Menubar,
-  MenubarMenu,
-  MenubarTrigger,
-} from "@/components/ui/menubar"
+import React, { useState, useEffect } from "react";
+import { Menubar } from "@/components/ui/menubar";
 import { ModeToggle } from "./mode-toggle";
 
 export default function Header() {
+  const [activeSection, setActiveSection] = useState("home");
+
+  const handleScroll = () => {
+    const sections = ["home", "skills", "projects", "experiences", "about"];
+    const scrollPosition = window.scrollY + window.innerHeight / 2;
+
+    for (let i = 0; i < sections.length; i++) {
+      const section = document.getElementById(sections[i]);
+      if (section && section.offsetTop <= scrollPosition && section.offsetTop + section.offsetHeight > scrollPosition) {
+        setActiveSection(sections[i]);
+        break;
+      }
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: "smooth" });
+      setActiveSection(sectionId);
     }
   };
 
   return (
-    <div className="flex items-center w-full max-w-6xl px-4 py-4 mx-auto my-0 sm:my-4">
+    <div className="flex items-center w-full max-w-6xl px-4 py-4 mx-auto">
       <Menubar>
-        <MenubarMenu>
-          <MenubarTrigger 
-          className="text-xs sm:text-sm px-2 sm:px-3"
-          onClick={() => scrollToSection('home')}>
-            Home
-          </MenubarTrigger>
-        </MenubarMenu>
-        <MenubarMenu>
-          <MenubarTrigger 
-          className="text-xs sm:text-sm px-2 sm:px-3"
-          onClick={() => scrollToSection('skills')}>Skills</MenubarTrigger>
-        </MenubarMenu>
-        <MenubarMenu>
-          <MenubarTrigger 
-          className="text-xs sm:text-sm px-2 sm:px-3"
-          onClick={() => scrollToSection('projects')}>Projects</MenubarTrigger>
-        </MenubarMenu>
-        <MenubarMenu>
-          <MenubarTrigger 
-          className="text-xs sm:text-sm px-2 sm:px-3"
-          onClick={() => scrollToSection('experiences')}>Experiences</MenubarTrigger>
-        </MenubarMenu>
-        <MenubarMenu>
-          <MenubarTrigger 
-          className="text-xs sm:text-sm px-2 sm:px-3"
-          onClick={() => scrollToSection('about')}>About</MenubarTrigger>
-        </MenubarMenu>
+        <a
+          className={`text-xs sm:text-sm px-2 sm:px-3 ${activeSection === "home" ? "font-bold" : ""}`}
+          onClick={() => scrollToSection("home")}
+        >
+          Home
+        </a>
+        <a
+          className={`text-xs sm:text-sm px-2 sm:px-3 ${activeSection === "skills" ? "font-bold" : ""}`}
+          onClick={() => scrollToSection("skills")}
+        >
+          Skills
+        </a>
+        <a
+          className={`text-xs sm:text-sm px-2 sm:px-3 ${activeSection === "projects" ? "font-bold" : ""}`}
+          onClick={() => scrollToSection("projects")}
+        >
+          Projects
+        </a>
+        <a
+          className={`text-xs sm:text-sm px-2 sm:px-3 ${activeSection === "experiences" ? "font-bold" : ""}`}
+          onClick={() => scrollToSection("experiences")}
+        >
+          Experiences
+        </a>
+        <a
+          className={`text-xs sm:text-sm px-2 sm:px-3 ${activeSection === "about" ? "font-bold" : ""}`}
+          onClick={() => scrollToSection("about")}
+        >
+          About
+        </a>
       </Menubar>
-
       <ModeToggle />
     </div>
   );
