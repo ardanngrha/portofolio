@@ -2,6 +2,7 @@
 import { useParams, useRouter } from 'next/navigation';
 import { projectData } from '../../components/projects';
 import { AiOutlineArrowLeft } from 'react-icons/ai';
+import Image from 'next/image';
 
 export default function ProjectDetail() {
   const router = useRouter();
@@ -19,9 +20,9 @@ export default function ProjectDetail() {
         <button onClick={() => router.back()} className="flex items-center gap-2 px-2 py-1">
           <AiOutlineArrowLeft size={20} />
         </button>
-        <h2 className="text-2xl font-semibold">{project.title}</h2>
+        <h2 className="text-xl font-semibold">{project.title}</h2>
       </div>
-      <img src={project.image} alt={project.title} className="w-full h-64 object-cover rounded mb-4" />
+      <Image src={project.image} alt={project.title} width={800} height={400} className="w-full h-64 object-cover rounded mb-4" priority />
       <p className="text-lg">{project.description}</p>
     </div>
   );
