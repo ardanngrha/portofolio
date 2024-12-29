@@ -15,7 +15,7 @@ export default function Hello() {
           </p>
         </div>
 
-        <div className="flex gap-4">
+        <div className="flex gap-4 mt-4">
           <a 
             href="https://github.com/ardanngrha" 
             target="_blank" 

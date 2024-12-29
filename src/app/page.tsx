@@ -16,9 +16,9 @@ export default function Home() {
       <main className="flex flex-col row-start-2 items-center sm:items-start max-w-2xl w-full">
         
         <Hello />
-        <Skills />
         <Projects />
         <Experiences />
+        <Skills />
         <About />
         
       </main>

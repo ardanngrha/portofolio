@@ -45,12 +45,6 @@ export default function Header() {
           Home
         </a>
         <a
-          className={`cursor-pointer text-xs sm:text-sm px-1 sm:px-3 ${activeSection === "skills" ? "font-bold" : ""}`}
-          onClick={() => scrollToSection("skills")}
-        >
-          Skills
-        </a>
-        <a
           className={`cursor-pointer text-xs sm:text-sm px-1 sm:px-3 ${activeSection === "projects" ? "font-bold" : ""}`}
           onClick={() => scrollToSection("projects")}
         >
@@ -61,6 +55,12 @@ export default function Header() {
           onClick={() => scrollToSection("experiences")}
         >
           Experiences
+        </a>
+        <a
+          className={`cursor-pointer text-xs sm:text-sm px-1 sm:px-3 ${activeSection === "skills" ? "font-bold" : ""}`}
+          onClick={() => scrollToSection("skills")}
+        >
+          Skills
         </a>
         <a
           className={`cursor-pointer text-xs sm:text-sm px-1 sm:px-3 ${activeSection === "about" ? "font-bold" : ""}`}
