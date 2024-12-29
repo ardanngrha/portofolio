@@ -8,7 +8,7 @@ import {
 import Image from "next/image"
 import Link from "next/link"
 
-const projectData = [
+export const projectData = [
   {
     id: 1,
     title: "Project 1",
@@ -59,16 +59,11 @@ export default function Projects() {
       <h3 className="text-2xl font-semibold mb-4">Projects</h3>
       <div className="grid sm:grid-cols-2 gap-4">
         {projectData.map((project) => (
-          <Link href={project.href} key={project.id}>
+          <Link href={`/projects/${project.id}`} key={project.id}>
             <Card className="transition-transform duration-200 hover:scale-105 cursor-pointer active:scale-95">
               <CardHeader>
                 <div className="relative w-full h-48 mb-4">
-                  <Image
-                    src={project.image}
-                    alt={project.title}
-                    fill
-                    className="object-cover rounded"
-                  />
+                  <img src={project.image} alt={project.title} className="object-cover rounded" />
                 </div>
                 <CardTitle>{project.title}</CardTitle>
               </CardHeader>
@@ -84,5 +79,5 @@ export default function Projects() {
         ))}
       </div>
     </section>
-  )
+  );
 }
