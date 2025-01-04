@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { LuGithub, LuLinkedin, LuBookText } from "react-icons/lu";
 
 export default function Hello() {
   return (
@@ -22,36 +21,10 @@ export default function Hello() {
               alt="Ardan's avatar" 
               width={256}
               height={256}
-              className="w-48 h-48 sm:w-64 sm:h-64 object-cover"
+              priority
+              className="w-48 h-auto sm:w-64"
             />
           </div>
-        </div>
-
-        <div className="flex gap-4 mt-4 justify-center">
-          <a 
-            href="https://github.com/ardanngrha" 
-            target="_blank" 
-            className="hover:opacity-70 inline-flex items-center justify-center gap-1"
-          >
-            <LuBookText />
-            <p>Resume</p>
-          </a>
-          <a 
-            href="https://github.com/ardanngrha" 
-            target="_blank" 
-            className="hover:opacity-70 inline-flex items-center justify-center gap-1"
-          >
-            <LuGithub />
-            <p>ardanngrha</p>
-          </a>
-          <a 
-            href="https://linkedin.com/in/ardanngrha" 
-            target="_blank" 
-            className="hover:opacity-70 inline-flex items-center justify-center gap-1"
-          >
-            <LuLinkedin />
-            <p>Ardana Nugraha</p>
-          </a>
         </div>
       </div>
     </section>

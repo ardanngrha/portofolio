@@ -1,6 +1,8 @@
 "use client";
 
+import Image from 'next/image';
 import React from 'react';
+import { LuGithub, LuLinkedin, LuBookText, LuMail } from "react-icons/lu";
 
 export function About() {
 
@@ -19,8 +21,10 @@ export function About() {
       <div className="relative grid grid-cols-2 gap-4 mb-8 h-[300px]">
         {pictures.map((pic, index) => (
           <div key={index} className="relative overflow-hidden rounded-lg">
-            <img 
+            <Image 
               src={pic} 
+              width={300}
+              height={300}
               alt={`Gallery image ${index + 1}`}
               className="object-cover w-full h-full"
             />
@@ -36,6 +40,48 @@ export function About() {
         Graduate and certified TensorFlow Developer. Demonstrates strong leadership through successful roles as
         Laboratory Coordinator and technical mentor, having guided hundreds of students across various programs.
       </p>
+
+      <h3 className="text-center text-xl font-semibold mb-4">Let&apos;s Work Together</h3>
+      <div className="flex gap-4 mt-4 justify-center">
+          <a 
+            href="https://github.com/ardanngrha" 
+            target="_blank" 
+            className="hover:opacity-70 inline-flex items-center justify-center gap-1"
+          >
+            <LuBookText />
+            <p>Resume</p>
+          </a>
+          <a 
+            href="https://github.com/ardanngrha" 
+            target="_blank" 
+            className="hover:opacity-70 inline-flex items-center justify-center gap-1"
+          >
+            <LuGithub />
+            <p>ardanngrha</p>
+          </a>
+          <a 
+            href="https://linkedin.com/in/ardanngrha" 
+            target="_blank" 
+            className="hover:opacity-70 inline-flex items-center justify-center gap-1"
+          >
+            <LuLinkedin />
+            <p>Ardana Nugraha</p>
+          </a>
+        </div>
+        <div className='flex gap-4 mt-1 justify-center'>
+          <a
+              href="mailto:contact.ardana@gmail.com"
+              target="_blank"
+              className="hover:opacity-70 inline-flex items-center justify-center gap-1"
+            >
+              <LuMail />
+              <p>
+                contact.ardana@gmail.com
+              </p>
+            </a>
+        </div>
+      {/* Contact */}
+      
 
       {/* Music Player */}
       {/* <iframe 
