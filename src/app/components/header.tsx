@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import { Menubar } from "@/components/ui/menubar";
 import { ModeToggle } from "./mode-toggle";
+import { throttle } from "lodash";
 
 export default function Header() {
   const [activeSection, setActiveSection] = useState("home");
@@ -21,12 +22,15 @@ export default function Header() {
     }
   };
 
+  const throttledHandleScroll = throttle(handleScroll, 100);
+
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", throttledHandleScroll);
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("scroll", throttledHandleScroll);
+      throttledHandleScroll.cancel();
     };
-  }, []);
+  }, [throttledHandleScroll]);
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -35,10 +39,18 @@ export default function Header() {
       const elementPosition = element.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
   
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth"
+      // window.scrollTo({
+      //   top: offsetPosition,
+      //   behavior: "smooth"
+      // });
+
+      requestAnimationFrame(() => {
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth"
+        });
       });
+
       setActiveSection(sectionId);
     }
   };
