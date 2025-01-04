@@ -5,6 +5,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
+import Image from "next/image";
 import Link from "next/link"
 
 export const projectData = [
@@ -62,7 +63,14 @@ export default function Projects() {
             <Card className="transition-transform duration-200 hover:scale-105 cursor-pointer active:scale-95">
               <CardHeader>
                 <div className="relative w-full h-48 mb-4">
-                  <img src={project.image} alt={project.title} className="object-cover rounded" />
+                  <Image 
+                    src={project.image} 
+                    alt={project.title}
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" 
+                    className="object-cover rounded" 
+                    priority={false}  
+                  />
                 </div>
                 <CardTitle>{project.title}</CardTitle>
               </CardHeader>

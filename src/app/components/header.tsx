@@ -36,6 +36,7 @@ export default function Header() {
   };
 
   return (
+    <header className="fixed top-0 left-0 right-0 w-full z-50 flex justify-center ">
     <div className="flex items-center w-full max-w-6xl px-4 py-4 mx-auto justify-center">
       <Menubar>
         <a
@@ -71,5 +72,6 @@ export default function Header() {
       </Menubar>
       <ModeToggle />
     </div>
+    </header>
   );
 }
