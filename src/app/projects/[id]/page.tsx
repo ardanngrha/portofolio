@@ -1,6 +1,6 @@
 'use client';
 import { useParams, useRouter } from 'next/navigation';
-import { projectData } from '../../components/projects';
+import { projectData } from '@/app/data/projects';
 import { AiOutlineArrowLeft } from 'react-icons/ai';
 import Image from 'next/image';
 
