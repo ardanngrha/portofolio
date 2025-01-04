@@ -9,8 +9,9 @@ export default function Header() {
 
   const handleScroll = () => {
     const sections = ["home", "skills", "projects", "experiences", "about"];
-    const scrollPosition = window.scrollY + window.innerHeight / 2;
-
+    const headerOffset = 40; // Same as above
+    const scrollPosition = window.scrollY + headerOffset;
+  
     for (let i = 0; i < sections.length; i++) {
       const section = document.getElementById(sections[i]);
       if (section && section.offsetTop <= scrollPosition && section.offsetTop + section.offsetHeight > scrollPosition) {
@@ -29,14 +30,21 @@ export default function Header() {
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
+    const headerOffset = 40; // Adjust this value based on your header height
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+  
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      });
       setActiveSection(sectionId);
     }
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 w-full z-50 flex justify-center ">
+    <header className="fixed top-0 left-0 right-0 z-50">
     <div className="flex items-center w-full max-w-6xl px-4 py-4 mx-auto justify-center">
       <Menubar>
         <a
