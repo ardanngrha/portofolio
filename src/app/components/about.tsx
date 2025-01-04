@@ -38,7 +38,7 @@ export function About() {
       </p>
 
       {/* Music Player */}
-      <iframe 
+      {/* <iframe 
         height="175" 
         width="100%" 
         title="Media player" 
@@ -54,7 +54,7 @@ export function About() {
           maxWidth: 660, 
           marginTop: 10
         }}
-      />
+      /> */}
     </section>
   );
 }

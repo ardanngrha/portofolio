@@ -10,7 +10,7 @@ export default function Header() {
 
   const handleScroll = () => {
     const sections = ["home", "skills", "projects", "experiences", "about"];
-    const headerOffset = 40; // Same as above
+    const headerOffset = 30; // Same as above
     const scrollPosition = window.scrollY + headerOffset;
   
     for (let i = 0; i < sections.length; i++) {
@@ -34,7 +34,7 @@ export default function Header() {
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
-    const headerOffset = 40; // Adjust this value based on your header height
+    const headerOffset = 30; // Adjust this value based on your header height
     if (element) {
       const elementPosition = element.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
