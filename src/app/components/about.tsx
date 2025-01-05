@@ -8,10 +8,10 @@ import { LuGithub, LuLinkedin, LuBookText, LuMail } from "react-icons/lu";
 export function About() {
 
   const pictures = [
-    "https://images.unsplash.com/photo-1508873535684-277a3cbcc4e8?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    "https://images.unsplash.com/photo-1508873535684-277a3cbcc4e8?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    "https://images.unsplash.com/photo-1508873535684-277a3cbcc4e8?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    "https://images.unsplash.com/photo-1508873535684-277a3cbcc4e8?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "/bni.jpg",
+    "/gojek.jpg",
+    "/grita.jpg",
+    "/seic2.jpg",
   ];
 
   return (
@@ -34,7 +34,7 @@ export function About() {
       </div>
 
       {/* About Text */}
-      <p className="text-muted-foreground text-base leading-relaxed mb-6">
+      <p className="text-muted-foreground text-base leading-relaxed mb-6 text-justify">
         Outstanding Graduate in Informatics Engineering (GPA: 3.94) from Institut Teknologi PLN with proven
         expertise in both software engineering and machine learning. Currently working as a Software Engineer at
         PLN Icon Plus, developing microservices and backend systems. Distinguished as a Bangkit Academy Best
@@ -45,7 +45,7 @@ export function About() {
       <h3 className="text-center text-xl font-semibold mb-4">Let&apos;s Work Together</h3>
       <div className="flex gap-4 mt-4 justify-center">
           <Link 
-            href="https://drive.google.com/file/d/1m_hrtTDp0oxo-k-QsqlRB3s1OJMbFFfv/view?usp=sharing" 
+            href="https://drive.google.com/file/d/1IuV5kTvLF6JPZ35USHUVOpCKgLiRf1_o/view?usp=sharing" 
             className="hover:opacity-70 inline-flex items-center justify-center gap-1"
           >
             <LuBookText />

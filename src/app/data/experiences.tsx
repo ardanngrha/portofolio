@@ -2,6 +2,7 @@ export const experienceData = [
   {
     title: "Software Engineer",
     company: "PLN Icon Plus",
+    emoji: "⚡", // Electricity/power related
     period: "Mar 2024 - Present",
     responsibilities: [
       "Building GRITA (Advanced Distribution Management System) for PLN's power grids",
@@ -12,6 +13,7 @@ export const experienceData = [
   {
     title: "Machine Learning Mentor",
     company: "Bangkit Academy",
+    emoji: "🤖", // AI/ML related
     period: "Feb 2024 - Aug 2024",
     responsibilities: [
       "Mentored 25 students through intensive machine learning curriculum",
@@ -22,6 +24,7 @@ export const experienceData = [
   {
     title: "API Developer Intern",
     company: "PT Bank Negara Indonesia",
+    emoji: "🏦",
     period: "Aug 2023 - Dec 2023",
     responsibilities: [
       "Developed BNI's Policy Maker using Next.js, TypeScript, and Express.js",
@@ -30,8 +33,9 @@ export const experienceData = [
     ],
   },
   {
-    title: "Full Stack Engineer",
+    title: "Full Stack Engineer - Generasi Gigih",
     company: "GoTo Impact Foundation",
+    emoji: "🛵",
     period: "Jul 2023 - Dec 2023",
     responsibilities: [
       "Built HijauSantara, a web application for mapping green spaces in Surabaya",
@@ -42,6 +46,7 @@ export const experienceData = [
   {
     title: "Backend Developer Path Facilitator",
     company: "Dicoding - DBS Foundation",
+    emoji: "👨‍🏫", // Teaching/mentoring related
     period: "May 2023 - Nov 2023",
     responsibilities: [
       "Mentored 50 awardees in intermediate and expert-level backend development",
@@ -52,6 +57,7 @@ export const experienceData = [
   {
     title: "Laboratory Assistant Coordinator",
     company: "Intelligent Computing & Software Engineering Laboratory ITPLN",
+    emoji: "🔬", // Laboratory related
     period: "Aug 2021 - Feb 2024",
     responsibilities: [
       "Led and managed a team of 24 assistants",

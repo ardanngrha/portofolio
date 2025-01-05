@@ -7,9 +7,9 @@ export function Experiences() {
       <div className="space-y-6">
         {experienceData.map((experience, index) => (
           <div key={index}>
-            <h4 className="font-semibold">{experience.title}</h4>
+            <h4 className="font-semibold">{experience.emoji} {experience.company}</h4>
             <p className="text-muted-foreground text-sm">
-              {experience.company} | {experience.period}
+              {experience.title} | {experience.period}
             </p>
             <ul className="mt-2 text-sm space-y-1">
               {experience.responsibilities.map((responsibility, idx) => (
