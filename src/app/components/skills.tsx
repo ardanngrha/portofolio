@@ -6,7 +6,7 @@ import { VscAzure } from "react-icons/vsc";
 export function Skills() {
   return (
     <section id="skills" className="w-full py-8">
-      <h3 className="text-2xl font-semibold mb-4">Skills</h3>
+      <h3 className="text-center text-2xl font-semibold mb-4">Skills</h3>
       
       <div className="space-y-4">
         <div>

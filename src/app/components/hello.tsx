@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { LuArrowDown } from "react-icons/lu";
+import { motion } from "framer-motion";
 
 export default function Hello() {
   const scrollToAbout = () => {
@@ -23,37 +24,84 @@ export default function Hello() {
   };
 
   return (
-    <section id="home" className="h-screen flex items-center justify-center -mt-16 sm:-mt-20">
+    <motion.section 
+      id="home" 
+      className="h-screen flex items-center justify-center -mt-16 sm:-mt-20"
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+    >
       <div className="w-full">
-        <div className="flex flex-col-reverse sm:flex-row sm:justify-between sm:items-center gap-8">
+        <motion.div 
+          className="flex flex-col-reverse sm:flex-row sm:justify-between sm:items-center gap-8"
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
+        >
           <div className="text-center sm:text-left">
-            <h1 className="text-4xl sm:text-5xl font-bold">Hi! 👋</h1>
-            <h2 className="text-2xl sm:text-3xl">You can call me Ardan!</h2>
-            <p className="text-base sm:text-xl text-muted-foreground">
+            <motion.h1 
+              className="text-4xl sm:text-5xl font-bold"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, delay: 0.4 }}
+            >
+              Hi! 👋
+            </motion.h1>
+            <motion.h2 
+              className="text-2xl sm:text-3xl"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, delay: 0.5 }}
+            >
+              You can call me Ardan!
+            </motion.h2>
+            <motion.p 
+              className="text-base sm:text-xl text-muted-foreground"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, delay: 0.6 }}
+            >
               I am a Software Engineer based in Indonesia.
-            </p>
-            <p className="text-base sm:text-xl text-muted-foreground">
+            </motion.p>
+            <motion.p 
+              className="text-base sm:text-xl text-muted-foreground"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, delay: 0.7 }}
+            >
               I work with Javascript and Python to build applications.
-            </p>
+            </motion.p>
           </div>
-          <div className="flex justify-center w-full sm:w-auto">
+          <motion.div 
+            className="flex justify-center w-full sm:w-auto"
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+          >
             <Image 
               src="/avatar.png" 
               alt="Ardan's avatar" 
               width={256}
               height={256}
-              priority
+              priority={true}
+              loading="eager"
+              quality={75}  
               className="w-48 h-auto sm:w-64"
             />
-          </div>
-        </div>
-        <div className="flex justify-center mt-8">
-          <Button variant="ghost"  onClick={scrollToAbout}>
+          </motion.div>
+        </motion.div>
+        <motion.div 
+          className="flex justify-center mt-8"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4, delay: 0.8 }}
+        >
+          <Button variant="ghost" onClick={scrollToAbout}>
             Get to know more about me
             <LuArrowDown className="animate-bounce ml-1 mt-1"/>
           </Button>
-        </div>
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   )
 }

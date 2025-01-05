@@ -12,7 +12,7 @@ import { projectData } from "@/app/data/projects";
 export default function Projects() {
   return (
     <section id="projects" className="w-full py-8">
-      <h3 className="text-2xl font-semibold mb-4">Projects</h3>
+      <h3 className="text-center text-2xl font-semibold mb-4">Projects</h3>
       <div className="grid sm:grid-cols-2 gap-4">
         {projectData.map((project) => (
           <Link href={`/projects/${project.id}`} key={project.id}>

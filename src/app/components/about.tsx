@@ -1,6 +1,7 @@
 "use client";
 
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 import { LuGithub, LuLinkedin, LuBookText, LuMail } from "react-icons/lu";
 
@@ -15,7 +16,7 @@ export function About() {
 
   return (
     <section id="about" className="w-full py-8">
-      <h3 className="text-2xl font-semibold mb-4">About Me</h3>
+      <h3 className="text-center text-2xl font-semibold mb-4">About Me</h3>
       
       {/* Photo Gallery */}
       <div className="relative grid grid-cols-2 gap-4 mb-8 h-[300px]">
@@ -43,33 +44,30 @@ export function About() {
 
       <h3 className="text-center text-xl font-semibold mb-4">Let&apos;s Work Together</h3>
       <div className="flex gap-4 mt-4 justify-center">
-          <a 
-            href="https://github.com/ardanngrha" 
-            target="_blank" 
+          <Link 
+            href="https://drive.google.com/file/d/1m_hrtTDp0oxo-k-QsqlRB3s1OJMbFFfv/view?usp=sharing" 
             className="hover:opacity-70 inline-flex items-center justify-center gap-1"
           >
             <LuBookText />
             <p>Resume</p>
-          </a>
-          <a 
+          </Link>
+          <Link 
             href="https://github.com/ardanngrha" 
-            target="_blank" 
             className="hover:opacity-70 inline-flex items-center justify-center gap-1"
           >
             <LuGithub />
             <p>ardanngrha</p>
-          </a>
-          <a 
+          </Link>
+          <Link
             href="https://linkedin.com/in/ardanngrha" 
-            target="_blank" 
             className="hover:opacity-70 inline-flex items-center justify-center gap-1"
           >
             <LuLinkedin />
             <p>Ardana Nugraha</p>
-          </a>
+          </Link>
         </div>
         <div className='flex gap-4 mt-1 justify-center'>
-          <a
+          <Link
               href="mailto:contact.ardana@gmail.com"
               target="_blank"
               className="hover:opacity-70 inline-flex items-center justify-center gap-1"
@@ -78,29 +76,10 @@ export function About() {
               <p>
                 contact.ardana@gmail.com
               </p>
-            </a>
+            </Link>
         </div>
       {/* Contact */}
       
-
-      {/* Music Player */}
-      {/* <iframe 
-        height="175" 
-        width="100%" 
-        title="Media player" 
-        src="https://embed.music.apple.com/id/album/timeless/1770380869?i=1770380890&amp;itscg=30200&amp;itsct=music_box_player&amp;ls=1&amp;app=music&amp;mttnsubad=1770380890&amp;theme=auto" 
-        id="embedPlayer" 
-        sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation" 
-        allow="autoplay *; encrypted-media *; clipboard-write" 
-        style={{
-          border: 0, 
-          borderRadius: 12, 
-          width: '100%', 
-          height: 175, 
-          maxWidth: 660, 
-          marginTop: 10
-        }}
-      /> */}
     </section>
   );
 }
