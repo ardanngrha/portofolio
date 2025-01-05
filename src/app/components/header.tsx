@@ -28,7 +28,6 @@ export default function Header() {
     const headerOffset = 35;
     const scrollPosition = window.scrollY + headerOffset;
     
-    // Find the section closest to the current scroll position
     let currentSection = sections[0];
     let minDistance = Infinity;
   
@@ -46,29 +45,27 @@ export default function Header() {
     setActiveSection(currentSection);
   };
 
-  // const throttledHandleScroll = throttle(handleScroll, 100);
-
   useEffect(() => {
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const scrollToSection = (sectionId: string) => {
+  const scrollToSection = async (sectionId: string) => {
     const element = document.getElementById(sectionId);
-    const headerOffset = 35; // Adjust this value based on your header height
-    if (element) {
-      const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+    if (!element) return;
 
-      requestAnimationFrame(() => {
-        window.scrollTo({
-          top: offsetPosition,
-          behavior: "smooth"
-        });
-      });
+    setActiveSection(sectionId);
 
-      setActiveSection(sectionId);
-    }
+    const headerOffset = 35;
+    const elementPosition = element.getBoundingClientRect().top;
+    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+    await window.scrollTo({
+      top: offsetPosition,
+      behavior: "smooth"
+    });
+
+    history.pushState(null, '', `#${sectionId}`);
   };
 
   return (
@@ -80,36 +77,19 @@ export default function Header() {
       >
       <div className="flex items-center w-full max-w-6xl px-4 py-4 mx-auto justify-center">
         <Menubar>
-          <a
-            className={`cursor-pointer text-xs sm:text-sm px-1 sm:px-3 ${activeSection === "home" ? "font-bold" : ""}`}
-            onClick={() => scrollToSection("home")}
+        {["home", "skills", "projects", "experiences", "about"].map((section) => (
+          <motion.a
+            key={section}
+            onClick={() => scrollToSection(section)}
+            className={`cursor-pointer text-xs sm:text-sm px-1 sm:px-3 ${
+              activeSection === section ? "font-bold" : ""
+            }`}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
           >
-            Home
-          </a>
-          <a
-            className={`cursor-pointer text-xs sm:text-sm px-1 sm:px-3 ${activeSection === "projects" ? "font-bold" : ""}`}
-            onClick={() => scrollToSection("projects")}
-          >
-            Projects
-          </a>
-          <a
-            className={`cursor-pointer text-xs sm:text-sm px-1 sm:px-3 ${activeSection === "experiences" ? "font-bold" : ""}`}
-            onClick={() => scrollToSection("experiences")}
-          >
-            Experiences
-          </a>
-          <a
-            className={`cursor-pointer text-xs sm:text-sm px-1 sm:px-3 ${activeSection === "skills" ? "font-bold" : ""}`}
-            onClick={() => scrollToSection("skills")}
-          >
-            Skills
-          </a>
-          <a
-            className={`cursor-pointer text-xs sm:text-sm px-1 sm:px-3 ${activeSection === "about" ? "font-bold" : ""}`}
-            onClick={() => scrollToSection("about")}
-          >
-            About
-          </a>
+            {section.charAt(0).toUpperCase() + section.slice(1)}
+          </motion.a>
+        ))}
         </Menubar>
         <ModeToggle />
       </div>
