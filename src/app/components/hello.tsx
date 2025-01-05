@@ -4,8 +4,17 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { LuArrowDown } from "react-icons/lu";
 import { motion } from "framer-motion";
+import { useTheme } from "next-themes";
+import { useState, useEffect } from "react";
 
 export default function Hello() {
+  const { theme } = useTheme();
+  const [key, setKey] = useState(0); 
+
+  useEffect(() => {
+    setKey(prev => prev + 1);
+  }, [theme]);
+
   const scrollToAbout = () => {
     const element = document.getElementById("about");
     const headerOffset = 30;
@@ -24,7 +33,8 @@ export default function Hello() {
   };
 
   return (
-    <motion.section 
+    <motion.section
+      key={key}  
       id="home" 
       className="h-screen flex items-center justify-center -mt-16 sm:-mt-20"
       initial={{ opacity: 0, y: 50 }}
@@ -45,7 +55,20 @@ export default function Hello() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.4 }}
             >
-              Hi! 👋
+              Hi! <motion.span
+                animate={{ 
+                  rotate: [0, 20, -10, 20, 0],
+                }}
+                transition={{ 
+                  duration: 1.5,
+                  repeat: Infinity,
+                  repeatDelay: 1,
+                  ease: "easeInOut"
+                }}
+                style={{ display: "inline-block", originX: 0.7, originY: 0.7 }}
+              >
+                👋
+              </motion.span>
             </motion.h1>
             <motion.h2 
               className="text-2xl sm:text-3xl"
