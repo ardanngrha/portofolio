@@ -4,34 +4,66 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import { LuGithub, LuLinkedin, LuBookText, LuMail } from "react-icons/lu";
+import { motion } from 'framer-motion';
 
 export function About() {
 
   const pictures = [
-    "/bni.jpg",
-    "/gojek.jpg",
-    "/grita.jpg",
-    "/seic2.jpg",
+    { src: "/bni.jpg", aspectRatio: "aspect-[3/4]" },
+    { src: "/gojek.jpg", aspectRatio: "aspect-[4/3]" },
+    { src: "/grita.jpg", aspectRatio: "aspect-[16/9]" },
+    { src: "/seic2.jpg", aspectRatio: "aspect-[16/9]" },
   ];
+
+  const galleryVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+      },
+    },
+  };
 
   return (
     <section id="about" className="w-full py-8">
       <h3 className="text-center text-2xl font-semibold mb-4">About Me</h3>
       
       {/* Photo Gallery */}
-      <div className="relative grid grid-cols-2 gap-4 mb-8 h-[300px]">
+      <motion.div 
+        className="grid grid-cols-2 gap-4 mb-8"
+        variants={galleryVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-100px" }}
+      >
         {pictures.map((pic, index) => (
-          <div key={index} className="relative overflow-hidden rounded-lg">
+          <motion.div
+            key={index}
+            className={`relative overflow-hidden rounded-lg ${pic.aspectRatio}`}
+            variants={itemVariants}
+          >
             <Image 
-              src={pic} 
-              width={300}
-              height={300}
+              src={pic.src}
+              fill
               alt={`Gallery image ${index + 1}`}
-              className="object-cover w-full h-full"
+              className="object-cover hover:scale-105 transition-transform duration-300"
             />
-          </div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
 
       {/* About Text */}
       <p className="text-muted-foreground text-base leading-relaxed mb-6 text-justify">

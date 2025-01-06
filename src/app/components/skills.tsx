@@ -1,6 +1,7 @@
 import React from 'react';
 import { FaJs, FaPython, FaJava, FaRust, FaReact, FaHtml5, FaCss3Alt, FaNodeJs, FaAws, FaGoogle, FaDocker, FaGit } from 'react-icons/fa';
 import { SiTypescript, SiNextdotjs, SiSpring, SiFastapi, SiFlask, SiPostgresql, SiMongodb, SiApachekafka, SiTensorflow } from 'react-icons/si';
+import { FaGolang } from "react-icons/fa6";
 import { VscAzure } from "react-icons/vsc";
 
 export function Skills() {
@@ -16,6 +17,7 @@ export function Skills() {
             <span className="bg-secondary text-secondary-foreground px-3 py-1 rounded-full text-sm flex items-center"><SiTypescript className="mr-2" />TypeScript</span>
             <span className="bg-secondary text-secondary-foreground px-3 py-1 rounded-full text-sm flex items-center"><FaPython className="mr-2" />Python</span>
             <span className="bg-secondary text-secondary-foreground px-3 py-1 rounded-full text-sm flex items-center"><FaJava className="mr-2" />Java</span>
+            <span className="bg-secondary text-secondary-foreground px-3 py-1 rounded-full text-sm flex items-center"><FaGolang className="mr-2" />Golang</span>
             <span className="bg-secondary text-secondary-foreground px-3 py-1 rounded-full text-sm flex items-center"><FaRust className="mr-2" />Rust</span>
           </div>
         </div>

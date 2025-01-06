@@ -24,7 +24,7 @@ export default function Header() {
   };
 
   const handleScroll = () => {
-    const sections = ["home", "skills", "projects", "experiences", "about"];
+    const sections = ["home", "projects", "experiences", "skills", "about"];
     const headerOffset = 35;
     const scrollPosition = window.scrollY + headerOffset;
     
@@ -77,7 +77,7 @@ export default function Header() {
       >
       <div className="flex items-center w-full max-w-6xl px-4 py-4 mx-auto justify-center">
         <Menubar>
-        {["home", "skills", "projects", "experiences", "about"].map((section) => (
+        {["home", "projects", "experiences", "skills", "about"].map((section) => (
           <motion.a
             key={section}
             onClick={() => scrollToSection(section)}
