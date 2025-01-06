@@ -1,12 +1,48 @@
-import React from 'react';
+"use client";
+
+import React, { useRef } from 'react';
 import { FaJs, FaPython, FaJava, FaRust, FaReact, FaHtml5, FaCss3Alt, FaNodeJs, FaAws, FaGoogle, FaDocker, FaGit } from 'react-icons/fa';
 import { SiTypescript, SiNextdotjs, SiSpring, SiFastapi, SiFlask, SiPostgresql, SiMongodb, SiApachekafka, SiTensorflow } from 'react-icons/si';
 import { FaGolang } from "react-icons/fa6";
 import { VscAzure } from "react-icons/vsc";
+import { useInView, motion } from 'framer-motion';
 
 export function Skills() {
+  const ref = useRef(null)
+  const isInView = useInView(ref, { 
+    once: false,
+    margin: "-100px" // Adjust this to control when animation triggers
+  })
+
+  const sectionVariants = {
+    hidden: { 
+      opacity: 0,
+      y: 75
+    },
+    visible: { 
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+        ease: "easeOut"
+      }
+    },
+    exit: {
+      opacity: 0,
+      y: -75,
+      transition: {
+        duration: 0.5,
+        ease: "easeIn" 
+      }
+    }
+  }
+
   return (
-    <section id="skills" className="w-full py-8">
+    <motion.section id="skills" className="w-full py-8"
+      ref={ref}
+      initial="hidden"
+      animate={isInView ? "visible" : "exit"}
+      variants={sectionVariants}>
       <h3 className="text-center text-2xl font-semibold mb-4">Skills</h3>
       
       <div className="space-y-4">
@@ -82,6 +118,6 @@ export function Skills() {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }

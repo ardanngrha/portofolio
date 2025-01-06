@@ -1,3 +1,5 @@
+"use client";
+
 import {
   Card,
   CardContent,
@@ -8,10 +10,45 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import { projectData } from "@/app/data/projects";
+import { motion, useInView } from "framer-motion"
+import { useRef } from "react"
 
 export default function Projects() {
+  const ref = useRef(null)
+  const isInView = useInView(ref, { 
+    once: false,
+    margin: "-100px" // Adjust this to control when animation triggers
+  })
+
+  const sectionVariants = {
+    hidden: { 
+      opacity: 0,
+      y: 75
+    },
+    visible: { 
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+        ease: "easeOut"
+      }
+    },
+    exit: {
+      opacity: 0,
+      y: -75,
+      transition: {
+        duration: 0.5,
+        ease: "easeIn" 
+      }
+    }
+  }
+
   return (
-    <section id="projects" className="w-full py-8">
+    <motion.section id="projects" className="w-full py-8"
+      ref={ref}
+      variants={sectionVariants}
+      initial="hidden"
+      animate={isInView ? "visible" : "exit"}>
       <h3 className="text-center text-2xl font-semibold mb-4">Projects</h3>
       <div className="grid sm:grid-cols-2 gap-4">
         {projectData.map((project) => (
@@ -41,6 +78,6 @@ export default function Projects() {
           </Link>
         ))}
       </div>
-    </section>
+    </motion.section>
   );
 }
