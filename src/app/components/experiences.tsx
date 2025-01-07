@@ -12,13 +12,13 @@ export function Experiences() {
   })
 
   const sectionVariants = {
-    hidden: { 
+    hidden: {
       opacity: 0,
-      y: 75
+      x: -75, // Changed from y: 75
     },
-    visible: { 
+    visible: {
       opacity: 1,
-      y: 0,
+      x: 0, // Changed from y: 0
       transition: {
         duration: 0.5,
         ease: "easeOut"
@@ -26,13 +26,13 @@ export function Experiences() {
     },
     exit: {
       opacity: 0,
-      y: -75,
+      x: 75, // Changed from y: -75
       transition: {
         duration: 0.5,
-        ease: "easeIn" 
+        ease: "easeIn"
       }
     }
-  }
+  };
 
   return (
     <motion.section id="experiences" className="w-full py-8"
@@ -40,7 +40,7 @@ export function Experiences() {
       initial="hidden"
       animate={isInView ? "visible" : "exit"}
       variants={sectionVariants}>
-      <h3 className="text-center text-2xl font-semibold mb-6">Experiences</h3>
+      <h3 className="text-center text-2xl font-semibold mb-6">Journey - Career Path</h3>
       <div className="space-y-6">
         {experienceData.map((experience, index) => (
           <div key={index}>

@@ -23,8 +23,8 @@ export function Contact () {
       transition: {
         duration: 0.5,
         ease: "easeOut",
-        staggerChildren: 0.2,
-        delayChildren: 0.3
+        staggerChildren: 0.1,
+        delayChildren: 0.1
       }
     },
     exit: {

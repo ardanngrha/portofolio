@@ -12,13 +12,13 @@ export function About() {
   })
 
   const sectionVariants = {
-    hidden: { 
+    hidden: {
       opacity: 0,
-      y: 75
+      x: -75, // Changed from y: 75
     },
-    visible: { 
+    visible: {
       opacity: 1,
-      y: 0,
+      x: 0, // Changed from y: 0
       transition: {
         duration: 0.5,
         ease: "easeOut"
@@ -26,13 +26,13 @@ export function About() {
     },
     exit: {
       opacity: 0,
-      y: -75,
+      x: 75, // Changed from y: -75
       transition: {
         duration: 0.5,
-        ease: "easeIn" 
+        ease: "easeIn"
       }
     }
-  }
+  };
 
   const pictures = [
     { src: "/bni.jpg", aspectRatio: "aspect-[3/4]" },
@@ -69,7 +69,7 @@ export function About() {
       initial="hidden"
       animate={isInView ? "visible" : "exit"}
       variants={sectionVariants}>
-      <h3 className="text-center text-2xl font-semibold mb-4">About Me</h3>
+      <h3 className="text-center text-2xl font-semibold mb-4">Behind The Code - My Story</h3>
       
       {/* Photo Gallery */}
       <motion.div 

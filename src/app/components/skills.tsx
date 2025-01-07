@@ -15,13 +15,13 @@ export function Skills() {
   })
 
   const sectionVariants = {
-    hidden: { 
+    hidden: {
       opacity: 0,
-      y: 75
+      x: -75, // Changed from y: 75
     },
-    visible: { 
+    visible: {
       opacity: 1,
-      y: 0,
+      x: 0, // Changed from y: 0
       transition: {
         duration: 0.5,
         ease: "easeOut"
@@ -29,13 +29,13 @@ export function Skills() {
     },
     exit: {
       opacity: 0,
-      y: -75,
+      x: 75, // Changed from y: -75
       transition: {
         duration: 0.5,
-        ease: "easeIn" 
+        ease: "easeIn"
       }
     }
-  }
+  };
 
   return (
     <motion.section id="skills" className="w-full py-8"
@@ -43,7 +43,7 @@ export function Skills() {
       initial="hidden"
       animate={isInView ? "visible" : "exit"}
       variants={sectionVariants}>
-      <h3 className="text-center text-2xl font-semibold mb-4">Skills</h3>
+      <h3 className="text-center text-2xl font-semibold mb-4">Craft & Tools - My Building Blocks</h3>
       
       <div className="space-y-4">
         <div>
