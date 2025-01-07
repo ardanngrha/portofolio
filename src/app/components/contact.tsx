@@ -9,19 +9,19 @@ export function Contact () {
   const ref = useRef(null)
   const isInView = useInView(ref, { 
     once: false,
-    margin: "-100px"
+    margin: "-75px"
   })
 
   const container = {
     hidden: { 
       opacity: 0,
-      y: 75
+      y: 50
     },
     visible: { 
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.5,
+        duration: 0.1,
         ease: "easeOut",
         staggerChildren: 0.1,
         delayChildren: 0.1
@@ -29,9 +29,9 @@ export function Contact () {
     },
     exit: {
       opacity: 0,
-      y: -75,
+      y: 50,
       transition: {
-        duration: 0.5,
+        duration: 0.1,
         ease: "easeIn",
         staggerDirection: -1
       }
@@ -41,7 +41,7 @@ export function Contact () {
   const item = {
     hidden: { 
       opacity: 0,
-      y: 75
+      y: 50
     },
     visible: { 
       opacity: 1,
@@ -53,7 +53,7 @@ export function Contact () {
     },
     exit: {
       opacity: 0,
-      y: -75,
+      y: -50,
       transition: {
         duration: 0.5,
         ease: "easeIn" 

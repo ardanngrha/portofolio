@@ -17,7 +17,7 @@ export function Skills() {
   const sectionVariants = {
     hidden: {
       opacity: 0,
-      x: -75, // Changed from y: 75
+      x: 75, // Changed from y: 75
     },
     visible: {
       opacity: 1,
@@ -29,7 +29,7 @@ export function Skills() {
     },
     exit: {
       opacity: 0,
-      x: 75, // Changed from y: -75
+      x: -75, // Changed from y: -75
       transition: {
         duration: 0.5,
         ease: "easeIn"

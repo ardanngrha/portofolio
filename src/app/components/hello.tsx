@@ -17,7 +17,7 @@ export default function Hello() {
 
   const scrollToAbout = () => {
     const element = document.getElementById("about");
-    const headerOffset = 30;
+    const headerOffset = 35;
     
     if (element) {
       const elementPosition = element.getBoundingClientRect().top;
