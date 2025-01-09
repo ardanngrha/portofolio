@@ -34,13 +34,6 @@ export function About() {
     }
   };
 
-  const pictures = [
-    { src: "/bni.jpg", aspectRatio: "aspect-[3/4]" },
-    { src: "/gojek.jpg", aspectRatio: "aspect-[4/3]" },
-    { src: "/grita.jpg", aspectRatio: "aspect-[16/9]" },
-    { src: "/seic2.jpg", aspectRatio: "aspect-[16/9]" },
-  ];
-
   const galleryVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
@@ -71,28 +64,87 @@ export function About() {
       variants={sectionVariants}>
       <h3 className="text-center text-2xl font-semibold mb-4">Behind The Code - My Story</h3>
       
-      {/* Photo Gallery */}
       <motion.div 
-        className="grid grid-cols-2 gap-4 mb-8"
+        className="grid grid-cols-2 auto-rows-[200px] gap-4 mb-8"
         variants={galleryVariants}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
       >
-        {pictures.map((pic, index) => (
-          <motion.div
-            key={index}
-            className={`relative overflow-hidden rounded-lg ${pic.aspectRatio}`}
-            variants={itemVariants}
-          >
-            <Image 
-              src={pic.src}
-              fill
-              alt={`Gallery image ${index + 1}`}
-              className="object-cover hover:scale-105 transition-transform duration-300"
-            />
-          </motion.div>
-        ))}
+        {/* Google - Tall left */}
+        <motion.div
+          className="row-span-2 relative overflow-hidden rounded-lg"
+          variants={itemVariants}
+        >
+          <Image 
+            src="/google.jpg"
+            fill
+            alt="Gallery image 1"
+            className="object-cover hover:scale-105 transition-transform duration-300"
+          />
+        </motion.div>
+
+        {/* BNI and SEIC - Right column top */}
+        <motion.div
+          className="relative overflow-hidden rounded-lg"
+          variants={itemVariants}
+        >
+          <Image 
+            src="/bni.jpg"
+            fill
+            alt="Gallery image 2"
+            className="object-cover hover:scale-105 transition-transform duration-300"
+          />
+        </motion.div>
+        <motion.div
+          className="relative overflow-hidden rounded-lg"
+          variants={itemVariants}
+        >
+          <Image 
+            src="/seic2.jpg"
+            fill
+            alt="Gallery image 3"
+            className="object-cover hover:scale-105 transition-transform duration-300"
+          />
+        </motion.div>
+
+        {/* GRITA and GOJEK - Left column bottom */}
+        <motion.div
+          className="relative overflow-hidden rounded-lg"
+          variants={itemVariants}
+        >
+          <Image 
+            src="/grita.jpg"
+            fill
+            alt="Gallery image 4"
+            className="object-cover hover:scale-105 transition-transform duration-300"
+          />
+        </motion.div>
+        {/* PLN - Bottom right */}
+        <motion.div
+          className="row-span-2 relative overflow-hidden rounded-lg"
+          variants={itemVariants}
+        >
+          <Image 
+            src="/pln.jpg"
+            fill
+            alt="Gallery image 6"
+            className="object-cover hover:scale-105 transition-transform duration-300"
+          />
+        </motion.div>
+        <motion.div
+          className="relative overflow-hidden rounded-lg"
+          variants={itemVariants}
+        >
+          <Image 
+            src="/gojek.jpg"
+            fill
+            alt="Gallery image 5"
+            className="object-cover hover:scale-105 transition-transform duration-300"
+          />
+        </motion.div>
+
+        
       </motion.div>
 
       {/* About Text */}
