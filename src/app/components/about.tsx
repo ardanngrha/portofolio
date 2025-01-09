@@ -65,26 +65,35 @@ export function About() {
       <h3 className="text-center text-2xl font-semibold mb-4">Behind The Code - My Story</h3>
       
       <motion.div 
-        className="grid grid-cols-2 auto-rows-[200px] gap-4 mb-8"
+        className="grid grid-cols-2 md:grid-cols-3 auto-rows-[130px] gap-4 mb-8"
         variants={galleryVariants}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
       >
-        {/* Google - Tall left */}
+        {/* Column 1 */}
         <motion.div
-          className="row-span-2 relative overflow-hidden rounded-lg"
+          className="col-span-2 md:col-span-1 row-span-2 relative overflow-hidden rounded-lg"
           variants={itemVariants}
         >
           <Image 
             src="/google.jpg"
             fill
-            alt="Gallery image 1"
+            alt="Google Developers"
             className="object-cover hover:scale-105 transition-transform duration-300"
           />
         </motion.div>
-
-        {/* BNI and SEIC - Right column top */}
+        <motion.div
+          className="relative overflow-hidden rounded-lg"
+          variants={itemVariants}
+        >
+          <Image 
+            src="/bangkit.png"
+            fill
+            alt="Bangkit Academy"
+            className="object-cover hover:scale-105 transition-transform duration-300"
+          />
+        </motion.div>
         <motion.div
           className="relative overflow-hidden rounded-lg"
           variants={itemVariants}
@@ -92,43 +101,31 @@ export function About() {
           <Image 
             src="/bni.jpg"
             fill
-            alt="Gallery image 2"
-            className="object-cover hover:scale-105 transition-transform duration-300"
-          />
-        </motion.div>
-        <motion.div
-          className="relative overflow-hidden rounded-lg"
-          variants={itemVariants}
-        >
-          <Image 
-            src="/seic2.jpg"
-            fill
-            alt="Gallery image 3"
+            alt="BNI"
             className="object-cover hover:scale-105 transition-transform duration-300"
           />
         </motion.div>
 
-        {/* GRITA and GOJEK - Left column bottom */}
+        {/* Column 2 */}
+        <motion.div
+          className="col-span-2 md:col-span-1 row-span-2 relative overflow-hidden rounded-lg"
+          variants={itemVariants}
+        >
+          <Image 
+            src="/gdsc.jpg"
+            fill
+            alt="Google Developer Student Clubs"
+            className="object-cover hover:scale-105 transition-transform duration-300"
+          />
+        </motion.div>
         <motion.div
           className="relative overflow-hidden rounded-lg"
           variants={itemVariants}
         >
           <Image 
-            src="/grita.jpg"
+            src="/gdsc2.jpg"
             fill
-            alt="Gallery image 4"
-            className="object-cover hover:scale-105 transition-transform duration-300"
-          />
-        </motion.div>
-        {/* PLN - Bottom right */}
-        <motion.div
-          className="row-span-2 relative overflow-hidden rounded-lg"
-          variants={itemVariants}
-        >
-          <Image 
-            src="/pln.jpg"
-            fill
-            alt="Gallery image 6"
+            alt="GDSC Event"
             className="object-cover hover:scale-105 transition-transform duration-300"
           />
         </motion.div>
@@ -139,12 +136,45 @@ export function About() {
           <Image 
             src="/gojek.jpg"
             fill
-            alt="Gallery image 5"
+            alt="Gojek"
             className="object-cover hover:scale-105 transition-transform duration-300"
           />
         </motion.div>
 
-        
+        {/* Column 3 */}
+        <motion.div
+          className="col-span-2 md:col-span-1 row-span-2 relative overflow-hidden rounded-lg"
+          variants={itemVariants}
+        >
+          <Image 
+            src="/pln.jpg"
+            fill
+            alt="PLN"
+            className="object-cover hover:scale-105 transition-transform duration-300"
+          />
+        </motion.div>
+        <motion.div
+          className="relative overflow-hidden rounded-lg"
+          variants={itemVariants}
+        >
+          <Image 
+            src="/grita.jpg"
+            fill
+            alt="Grita"
+            className="object-cover hover:scale-105 transition-transform duration-300"
+          />
+        </motion.div>
+        <motion.div
+          className="relative overflow-hidden rounded-lg"
+          variants={itemVariants}
+        >
+          <Image 
+            src="/seic.jpg"
+            fill
+            alt="SEIC"
+            className="object-cover hover:scale-105 transition-transform duration-300"
+          />
+        </motion.div>
       </motion.div>
 
       {/* About Text */}
