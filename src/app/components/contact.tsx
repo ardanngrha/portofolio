@@ -2,7 +2,9 @@
 
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
-import { LuGithub, LuLinkedin, LuBookText, LuMail } from "react-icons/lu";
+import { LuBookText, LuMail } from "react-icons/lu";
+import { SiMedium } from "react-icons/si";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
 import Link from 'next/link';
 
 export function Contact () {
@@ -82,20 +84,10 @@ export function Contact () {
       >
         <motion.div variants={item}>
           <Link 
-            href="https://drive.google.com/file/d/1IuV5kTvLF6JPZ35USHUVOpCKgLiRf1_o/view?usp=sharing" 
-            className="hover:opacity-70 inline-flex items-center justify-center gap-1"
-          >
-            <LuBookText />
-            <p>Resume</p>
-          </Link>
-        </motion.div>
-
-        <motion.div variants={item}>
-          <Link 
             href="https://github.com/ardanngrha" 
             className="hover:opacity-70 inline-flex items-center justify-center gap-1"
           >
-            <LuGithub />
+            <FaGithub />
             <p>ardanngrha</p>
           </Link>
         </motion.div>
@@ -105,16 +97,37 @@ export function Contact () {
             href="https://linkedin.com/in/ardanngrha" 
             className="hover:opacity-70 inline-flex items-center justify-center gap-1"
           >
-            <LuLinkedin />
+            <FaLinkedin />
             <p>Ardana Nugraha</p>
           </Link>
         </motion.div>
+
+        <motion.div variants={item}>
+          <Link
+            href="https://medium.com/@ardanngrha" 
+            className="hover:opacity-70 inline-flex items-center justify-center gap-1"
+          >
+            <SiMedium />
+            <p>@ardanngrha</p>
+          </Link>
+
+        </motion.div>
+        
       </motion.div>
 
       <motion.div 
         className='flex gap-4 mt-1 justify-center'
         variants={container}
       >
+        <motion.div variants={item}>
+          <Link 
+            href="https://drive.google.com/file/d/1IuV5kTvLF6JPZ35USHUVOpCKgLiRf1_o/view?usp=sharing" 
+            className="hover:opacity-70 inline-flex items-center justify-center gap-1"
+          >
+            <LuBookText />
+            <p>Resume</p>
+          </Link>
+        </motion.div>
         <motion.div variants={item}>
           <Link
             href="mailto:contact.ardana@gmail.com"
