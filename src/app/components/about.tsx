@@ -79,7 +79,9 @@ export function About() {
           <Image
             src="/google.jpg"
             fill
+            loading="lazy"
             alt="Google Developers"
+            sizes="(max-width: 768px) 100vw, 50vw"
             className="object-cover hover:scale-105 transition-transform duration-300"
           />
         </motion.div>
@@ -90,6 +92,8 @@ export function About() {
           <Image
             src="/bangkit.png"
             fill
+            loading="lazy"
+            sizes="(max-width: 768px) 100vw, 50vw"
             alt="Bangkit Academy"
             className="object-cover hover:scale-105 transition-transform duration-300"
           />
@@ -101,6 +105,8 @@ export function About() {
           <Image
             src="/bni.jpg"
             fill
+            loading="lazy"
+            sizes="(max-width: 768px) 100vw, 50vw"
             alt="BNI"
             className="object-cover hover:scale-105 transition-transform duration-300"
           />
@@ -114,6 +120,8 @@ export function About() {
           <Image
             src="/gdsc.jpg"
             fill
+            loading="lazy"
+            sizes="(max-width: 768px) 100vw, 50vw"
             alt="Google Developer Student Clubs"
             className="object-cover hover:scale-105 transition-transform duration-300"
           />
@@ -125,6 +133,8 @@ export function About() {
           <Image
             src="/gdsc2.jpg"
             fill
+            loading="lazy"
+            sizes="(max-width: 768px) 100vw, 50vw"
             alt="GDSC Event"
             className="object-cover hover:scale-105 transition-transform duration-300"
           />
@@ -136,6 +146,8 @@ export function About() {
           <Image
             src="/gojek.jpg"
             fill
+            loading="lazy"
+            sizes="(max-width: 768px) 100vw, 50vw"
             alt="Gojek"
             className="object-cover hover:scale-105 transition-transform duration-300"
           />
@@ -149,6 +161,8 @@ export function About() {
           <Image
             src="/pln.jpg"
             fill
+            loading="lazy"
+            sizes="(max-width: 768px) 100vw, 50vw"
             alt="PLN"
             className="object-cover hover:scale-105 transition-transform duration-300"
           />
@@ -160,6 +174,8 @@ export function About() {
           <Image
             src="/grita.jpg"
             fill
+            loading="lazy"
+            sizes="(max-width: 768px) 100vw, 50vw"
             alt="Grita"
             className="object-cover hover:scale-105 transition-transform duration-300"
           />
@@ -171,6 +187,8 @@ export function About() {
           <Image
             src="/seic.jpg"
             fill
+            loading="lazy"
+            sizes="(max-width: 768px) 100vw, 50vw"
             alt="SEIC"
             className="object-cover hover:scale-105 transition-transform duration-300"
           />

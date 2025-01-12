@@ -9,7 +9,7 @@ import { useState, useEffect } from "react";
 
 export default function Hello() {
   const { theme } = useTheme();
-  const [key, setKey] = useState(0); 
+  const [key, setKey] = useState(0);
 
   useEffect(() => {
     setKey(prev => prev + 1);
@@ -18,11 +18,11 @@ export default function Hello() {
   const scrollToAbout = () => {
     const element = document.getElementById("about");
     const headerOffset = 35;
-    
+
     if (element) {
       const elementPosition = element.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-      
+
       requestAnimationFrame(() => {
         window.scrollTo({
           top: offsetPosition,
@@ -34,32 +34,32 @@ export default function Hello() {
 
   return (
     <motion.section
-      key={key}  
-      id="home" 
+      key={key}
+      id="home"
       className="h-screen flex items-center justify-center -mt-16 sm:-mt-20"
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
     >
       <div className="w-full">
-        <motion.div 
+        <motion.div
           className="flex flex-col-reverse sm:flex-row sm:justify-between sm:items-center gap-8"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
         >
           <div className="text-center sm:text-left">
-            <motion.h1 
+            <motion.h1
               className="text-4xl sm:text-5xl font-bold"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.4 }}
             >
               Hi! <motion.span
-                animate={{ 
+                animate={{
                   rotate: [0, 20, -10, 20, 0],
                 }}
-                transition={{ 
+                transition={{
                   duration: 1.5,
                   repeat: Infinity,
                   repeatDelay: 1,
@@ -70,7 +70,7 @@ export default function Hello() {
                 👋
               </motion.span>
             </motion.h1>
-            <motion.h2 
+            <motion.h2
               className="text-2xl sm:text-3xl"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -78,7 +78,7 @@ export default function Hello() {
             >
               You can call me Ardan!
             </motion.h2>
-            <motion.p 
+            <motion.p
               className="text-base sm:text-xl text-muted-foreground"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -86,7 +86,7 @@ export default function Hello() {
             >
               I am a Software Engineer based in Indonesia.
             </motion.p>
-            <motion.p 
+            <motion.p
               className="text-base sm:text-xl text-muted-foreground"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -95,25 +95,24 @@ export default function Hello() {
               I work with Javascript and Python to build applications.
             </motion.p>
           </div>
-          <motion.div 
+          <motion.div
             className="flex justify-center w-full sm:w-auto"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.3 }}
           >
-            <Image 
-              src="/avatar.png" 
-              alt="Ardan's avatar" 
+            <Image
+              src="/avatar.png"
+              alt="Ardan's avatar"
               width={256}
               height={256}
               priority={true}
-              loading="eager"
-              quality={75}  
+              quality={75}
               className="w-48 h-auto sm:w-64"
             />
           </motion.div>
         </motion.div>
-        <motion.div 
+        <motion.div
           className="flex justify-center mt-8"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -121,7 +120,7 @@ export default function Hello() {
         >
           <Button variant="ghost" onClick={scrollToAbout}>
             Get to know more about me
-            <LuArrowDown className="animate-bounce ml-1 mt-1"/>
+            <LuArrowDown className="animate-bounce ml-1 mt-1" />
           </Button>
         </motion.div>
       </div>

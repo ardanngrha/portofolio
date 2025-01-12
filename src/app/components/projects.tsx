@@ -87,9 +87,9 @@ export default function Projects() {
                       src={project.image}
                       alt={project.title}
                       fill
+                      loading="lazy"
                       sizes="(max-width: 768px) 100vw, 40vw"
                       className="object-cover"
-                      priority={false}
                     />
                   </div>
                 </div>
