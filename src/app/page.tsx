@@ -12,14 +12,14 @@ export default function Home() {
     <div className="grid grid-rows-[10px_1fr_10px] items-center justify-items-center min-h-screen p-4 pb-10 gap-4 w-full sm:p-10 font-[family-name:var(--font-geist-sans)]">
       <Header />
       <main className="flex flex-col row-start-2 items-center sm:items-start max-w-2xl mx-auto w-full">
-        
+
         <Hello />
         <Projects />
         <Experiences />
         <Skills />
         <About />
         <Contact />
-        
+
       </main>
       <Footer />
     </div>

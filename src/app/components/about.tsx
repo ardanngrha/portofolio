@@ -6,7 +6,7 @@ import { motion, useInView } from 'framer-motion';
 
 export function About() {
   const ref = useRef(null)
-  const isInView = useInView(ref, { 
+  const isInView = useInView(ref, {
     once: false,
     margin: "-100px" // Adjust this to control when animation triggers
   })
@@ -63,8 +63,8 @@ export function About() {
       animate={isInView ? "visible" : "exit"}
       variants={sectionVariants}>
       <h3 className="text-center text-2xl font-semibold mb-4">Behind The Code - My Story</h3>
-      
-      <motion.div 
+
+      <motion.div
         className="grid grid-cols-2 md:grid-cols-3 auto-rows-[130px] gap-4 mb-8"
         variants={galleryVariants}
         initial="hidden"
@@ -76,7 +76,7 @@ export function About() {
           className="col-span-2 md:col-span-1 row-span-2 relative overflow-hidden rounded-lg"
           variants={itemVariants}
         >
-          <Image 
+          <Image
             src="/google.jpg"
             fill
             alt="Google Developers"
@@ -87,7 +87,7 @@ export function About() {
           className="relative overflow-hidden rounded-lg"
           variants={itemVariants}
         >
-          <Image 
+          <Image
             src="/bangkit.png"
             fill
             alt="Bangkit Academy"
@@ -98,7 +98,7 @@ export function About() {
           className="relative overflow-hidden rounded-lg"
           variants={itemVariants}
         >
-          <Image 
+          <Image
             src="/bni.jpg"
             fill
             alt="BNI"
@@ -111,7 +111,7 @@ export function About() {
           className="col-span-2 md:col-span-1 row-span-2 relative overflow-hidden rounded-lg"
           variants={itemVariants}
         >
-          <Image 
+          <Image
             src="/gdsc.jpg"
             fill
             alt="Google Developer Student Clubs"
@@ -122,7 +122,7 @@ export function About() {
           className="relative overflow-hidden rounded-lg"
           variants={itemVariants}
         >
-          <Image 
+          <Image
             src="/gdsc2.jpg"
             fill
             alt="GDSC Event"
@@ -133,7 +133,7 @@ export function About() {
           className="relative overflow-hidden rounded-lg"
           variants={itemVariants}
         >
-          <Image 
+          <Image
             src="/gojek.jpg"
             fill
             alt="Gojek"
@@ -146,7 +146,7 @@ export function About() {
           className="col-span-2 md:col-span-1 row-span-2 relative overflow-hidden rounded-lg"
           variants={itemVariants}
         >
-          <Image 
+          <Image
             src="/pln.jpg"
             fill
             alt="PLN"
@@ -157,7 +157,7 @@ export function About() {
           className="relative overflow-hidden rounded-lg"
           variants={itemVariants}
         >
-          <Image 
+          <Image
             src="/grita.jpg"
             fill
             alt="Grita"
@@ -168,7 +168,7 @@ export function About() {
           className="relative overflow-hidden rounded-lg"
           variants={itemVariants}
         >
-          <Image 
+          <Image
             src="/seic.jpg"
             fill
             alt="SEIC"
@@ -177,13 +177,26 @@ export function About() {
         </motion.div>
       </motion.div>
 
-      {/* About Text */}
       <p className="text-muted-foreground text-base leading-relaxed mb-6 text-justify">
-        Outstanding Graduate in Informatics Engineering (GPA: 3.94) from Institut Teknologi PLN with proven
-        expertise in both software engineering and machine learning. Currently working as a Software Engineer at
-        PLN Icon Plus, developing microservices and backend systems. Distinguished as a Bangkit Academy Best
-        Graduate and certified TensorFlow Developer. Demonstrates strong leadership through successful roles as
-        Laboratory Coordinator and technical mentor, having guided hundreds of students across various programs.
+        Hello Visitor! Ardan here. I&apos;m a software engineer who found my passion in coding during my university years at Institut Teknologi PLN.
+        What started as curiosity in a programming class turned into a journey of continuous learning and growth.
+        Through dedication and hard work, I graduated with distinction (GPA: 3.94) in Informatics Engineering, but
+        what truly excites me is the potential of technology to solve real-world problems.
+      </p>
+
+      <p className="text-muted-foreground text-base leading-relaxed mb-6 text-justify">
+        My journey has been shaped by meaningful experiences - from mentoring fellow students as a Laboratory
+        Coordinator to being recognized as a Bangkit Academy Best Graduate. Currently, I&apos;m contributing to
+        Indonesia&apos;s power infrastructure as a Software Engineer at PLN Icon Plus, where I develop microservices
+        and backend systems that help manage the nation&apos;s power grid.
+      </p>
+
+      <p className="text-muted-foreground text-base leading-relaxed mb-6 text-justify">
+        Beyond technical skills, I believe in the power of knowledge sharing. I&apos;ve had the privilege of guiding
+        hundreds of students as a technical mentor across various programs, learning as much from them as they
+        have from me. As a certified TensorFlow Developer, I&apos;m particularly passionate about the intersection of
+        software engineering and machine learning, always exploring new ways to combine these fields to create
+        impactful solutions.
       </p>
     </motion.section>
   );
