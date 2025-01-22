@@ -77,7 +77,7 @@ export function About() {
           variants={itemVariants}
         >
           <Image
-            src="/google.jpg"
+            src="https://ardanstorage.blob.core.windows.net/media/google.jpg"
             fill
             loading="lazy"
             alt="Google Developers"
@@ -90,7 +90,7 @@ export function About() {
           variants={itemVariants}
         >
           <Image
-            src="/bangkit.png"
+            src="https://ardanstorage.blob.core.windows.net/media/bangkit.png"
             fill
             loading="lazy"
             sizes="(max-width: 768px) 100vw, 50vw"
@@ -103,7 +103,7 @@ export function About() {
           variants={itemVariants}
         >
           <Image
-            src="/bni.jpg"
+            src="https://ardanstorage.blob.core.windows.net/media/bni.jpg"
             fill
             loading="lazy"
             sizes="(max-width: 768px) 100vw, 50vw"
@@ -118,7 +118,7 @@ export function About() {
           variants={itemVariants}
         >
           <Image
-            src="/gdsc.jpg"
+            src="https://ardanstorage.blob.core.windows.net/media/gdsc.jpg"
             fill
             loading="lazy"
             sizes="(max-width: 768px) 100vw, 50vw"
@@ -131,7 +131,7 @@ export function About() {
           variants={itemVariants}
         >
           <Image
-            src="/gdsc2.jpg"
+            src="https://ardanstorage.blob.core.windows.net/media/gdsc2.jpg"
             fill
             loading="lazy"
             sizes="(max-width: 768px) 100vw, 50vw"
@@ -144,7 +144,7 @@ export function About() {
           variants={itemVariants}
         >
           <Image
-            src="/gojek.jpg"
+            src="https://ardanstorage.blob.core.windows.net/media/gojek.jpg"
             fill
             loading="lazy"
             sizes="(max-width: 768px) 100vw, 50vw"
@@ -159,7 +159,7 @@ export function About() {
           variants={itemVariants}
         >
           <Image
-            src="/pln.jpg"
+            src="https://ardanstorage.blob.core.windows.net/media/pln.jpg"
             fill
             loading="lazy"
             sizes="(max-width: 768px) 100vw, 50vw"
@@ -172,7 +172,7 @@ export function About() {
           variants={itemVariants}
         >
           <Image
-            src="/grita.jpg"
+            src="https://ardanstorage.blob.core.windows.net/media/grita.jpg"
             fill
             loading="lazy"
             sizes="(max-width: 768px) 100vw, 50vw"
@@ -185,7 +185,7 @@ export function About() {
           variants={itemVariants}
         >
           <Image
-            src="/seic.jpg"
+            src="https://ardanstorage.blob.core.windows.net/media/seic.jpg"
             fill
             loading="lazy"
             sizes="(max-width: 768px) 100vw, 50vw"

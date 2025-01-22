@@ -102,7 +102,7 @@ export default function Hello() {
             transition={{ duration: 0.5, delay: 0.3 }}
           >
             <Image
-              src="/avatar.png"
+              src="https://ardanstorage.blob.core.windows.net/media/avatar.png"
               alt="Ardan's avatar"
               width={256}
               height={256}
