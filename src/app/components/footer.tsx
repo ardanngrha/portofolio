@@ -54,7 +54,7 @@ export const Footer = () => {
         <div className="flex items-center gap-2">
           © {new Date().getFullYear()} Ardan Nugraha
           <a
-            href="https://github.com/ArdanKR/portofolio"
+            href="https://github.com/ardanngrha/portofolio"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:underline flex items-center gap-1"
