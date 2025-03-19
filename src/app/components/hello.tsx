@@ -92,7 +92,7 @@ export default function Hello() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.7 }}
             >
-              I work with Javascript and Python to build applications.
+              I work with Typescript, Python, and Java to build applications.
             </motion.p>
           </div>
           <motion.div

@@ -5,9 +5,22 @@ export const experienceData = [
     emoji: "⚡", // Electricity/power related
     period: "Mar 2024 - Present",
     responsibilities: [
-      "Building GRITA (Advanced Distribution Management System) for PLN's power grids",
-      "Creating microservices using Python FastAPI, PostgreSQL, and Kafka",
-      "Creating backend services integrated with ICCP server using Java 21 and Spring Boot",
+      "Developing GRITA, an Advanced Distribution Management System (ADMS) for PLN’s power grids using Event-Driven Architecture.",
+      "Building microservices that connect 500 + field devices via Modbus TCP, IEC104, and ICCP protocols, processing millions of real - time data points within milliseconds.",
+      "Creating web-based server simulators for Modbus TCP and IEC104, enabling comprehensive testing and validation.",
+      "Collaborating with frontend developers to integrate high-performance real-time dashboards for monitoring and control."
+    ],
+  },
+  {
+    title: "Backend Developer Path Facilitator",
+    company: "Dicoding - DBS Foundation",
+    emoji: "👨‍🏫", // Teaching/mentoring related
+    period: "Nov 2024 - Present | May 2023 - Nov 2023",
+    responsibilities: [
+      "Mentored 70+ students in intermediate and expert-level backend development.",
+      "Led 20+ weekly progress review meetings, troubleshooting complex issues, optimizing system designs, and ensuring learning objectives were met.",
+      "Achieved a 4.47/5 facilitator rating in the first batch, ranking among the top mentors.",
+      "Provided lessons on backend technologies, architecture, and best practices, equipping students with industry-ready skills."
     ],
   },
   {
@@ -27,9 +40,9 @@ export const experienceData = [
     emoji: "🏦",
     period: "Aug 2023 - Dec 2023",
     responsibilities: [
-      "Developed BNI's Policy Maker using Next.js, TypeScript, and Express.js",
-      "Utilized MongoDB for database management",
-      "Achieved a perfect completion score of 90 (A)",
+      "Developed BNI's Policy Maker, a low-code platform (draw.io like) that enables internal developers to efficiently create, manage, and deploy APIs within the bank’s ecosystem.",
+      "Designed and implemented a drag-and-drop interface, streamlining API creation for non-technical users.",
+      "Achieved a perfect completion score of 90 (A)."
     ],
   },
   {
@@ -44,25 +57,15 @@ export const experienceData = [
     ],
   },
   {
-    title: "Backend Developer Path Facilitator",
-    company: "Dicoding - DBS Foundation",
-    emoji: "👨‍🏫", // Teaching/mentoring related
-    period: "May 2023 - Nov 2023",
-    responsibilities: [
-      "Mentored 50 awardees in intermediate and expert-level backend development",
-      "Led weekly progress review meetings",
-      "Earned a facilitator rating of 4.47/5",
-    ],
-  },
-  {
-    title: "Laboratory Assistant Coordinator",
+    title: "Laboratory Assistant",
     company: "Intelligent Computing & Software Engineering Laboratory ITPLN",
     emoji: "🔬", // Laboratory related
     period: "Aug 2021 - Feb 2024",
     responsibilities: [
-      "Led and managed a team of 24 assistants",
-      "Assisted lecturers in teaching programming and machine learning courses",
-      "Maintained laboratory hardware, software, and tools",
+      "Selected as coordinator since March 2023, leading and managing a team of 24 assistants while overseeing the laboratory's day-to-day operations.",
+      "Assisting lecturers in teaching various courses, supporting 30–40 students per class.",
+      "Providing over 10 hours per week of direct assistance to students, addressing their questions, debugging code, and helping them apply theoretical concepts.",
+      "Maintaining and troubleshooting hardware, software, and tools in two laboratories, ensuring seamless operation for 250 + students each semester."
     ],
   },
 ];

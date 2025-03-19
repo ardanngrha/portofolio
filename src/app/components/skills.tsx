@@ -1,15 +1,14 @@
 "use client";
 
 import React, { useRef } from 'react';
-import { FaJs, FaPython, FaJava, FaRust, FaReact, FaHtml5, FaCss3Alt, FaNodeJs, FaAws, FaGoogle, FaDocker, FaGit } from 'react-icons/fa';
+import { FaJs, FaPython, FaJava, FaReact, FaHtml5, FaCss3Alt, FaNodeJs, FaAws, FaGoogle, FaDocker, FaGit } from 'react-icons/fa';
 import { SiTypescript, SiNextdotjs, SiSpring, SiFastapi, SiFlask, SiPostgresql, SiMongodb, SiApachekafka, SiTensorflow } from 'react-icons/si';
-import { FaGolang } from "react-icons/fa6";
 import { VscAzure } from "react-icons/vsc";
 import { useInView, motion } from 'framer-motion';
 
 export function Skills() {
   const ref = useRef(null)
-  const isInView = useInView(ref, { 
+  const isInView = useInView(ref, {
     once: false,
     margin: "-100px" // Adjust this to control when animation triggers
   })
@@ -44,7 +43,7 @@ export function Skills() {
       animate={isInView ? "visible" : "exit"}
       variants={sectionVariants}>
       <h3 className="text-center text-2xl font-semibold mb-4">Craft & Tools - My Building Blocks</h3>
-      
+
       <div className="space-y-4">
         <div>
           <h4 className="text-sm text-muted-foreground mb-2">Programming Languages</h4>
@@ -53,8 +52,6 @@ export function Skills() {
             <span className="bg-secondary text-secondary-foreground px-3 py-1 rounded-full text-sm flex items-center"><SiTypescript className="mr-2" />TypeScript</span>
             <span className="bg-secondary text-secondary-foreground px-3 py-1 rounded-full text-sm flex items-center"><FaPython className="mr-2" />Python</span>
             <span className="bg-secondary text-secondary-foreground px-3 py-1 rounded-full text-sm flex items-center"><FaJava className="mr-2" />Java</span>
-            <span className="bg-secondary text-secondary-foreground px-3 py-1 rounded-full text-sm flex items-center"><FaGolang className="mr-2" />Golang</span>
-            <span className="bg-secondary text-secondary-foreground px-3 py-1 rounded-full text-sm flex items-center"><FaRust className="mr-2" />Rust</span>
           </div>
         </div>
 

@@ -75,7 +75,7 @@ export default function Projects() {
       variants={sectionVariants}
       initial="hidden"
       animate={isInView ? "visible" : "exit"}>
-      <h3 className="text-center text-2xl font-semibold mb-8">Featured Personal Projects</h3>
+      <h3 className="text-center text-2xl font-semibold mb-8">Personal Projects</h3>
       <div className="flex flex-col gap-3">
         {projectData.map((project) => (
           <Link href={project.href} key={project.id} target="_blank" rel="noopener noreferrer">
