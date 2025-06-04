@@ -10,6 +10,7 @@ export const experienceData = [
       "Creating web-based server simulators for Modbus TCP and IEC104, enabling comprehensive testing and validation.",
       "Collaborating with frontend developers to integrate high-performance real-time dashboards for monitoring and control."
     ],
+    techStack: ['typescript', 'react', 'python', 'fastapi', 'vite', 'postgres', 'kafka']
   },
   {
     title: "Backend Developer Path Facilitator",
@@ -22,6 +23,7 @@ export const experienceData = [
       "Achieved a 4.47/5 facilitator rating in the first batch, ranking among the top mentors.",
       "Provided lessons on backend technologies, architecture, and best practices, equipping students with industry-ready skills."
     ],
+    techStack: ['javascript', 'nodejs', 'postgres', 'aws', 'rabbitmq', 'redis']
   },
   {
     title: "Machine Learning Mentor",
@@ -33,6 +35,7 @@ export const experienceData = [
       "Designed and facilitated Instructor-Led Training sessions",
       "Provided personalized feedback and support to students",
     ],
+    techStack: ['javascript', 'react', 'vite', 'postgres', 'redis']
   },
   {
     title: "API Developer Intern",
@@ -44,6 +47,7 @@ export const experienceData = [
       "Designed and implemented a drag-and-drop interface, streamlining API creation for non-technical users.",
       "Achieved a perfect completion score of 90 (A)."
     ],
+    techStack: ['javascript', 'react', 'vite', 'postgres', 'redis']
   },
   {
     title: "Full Stack Engineer - Generasi Gigih",
@@ -55,6 +59,7 @@ export const experienceData = [
       "Developed using React.js, Node.js, Express.js, and MongoDB",
       "Deployed application on Google Cloud Platform (GCP)",
     ],
+    techStack: ['javascript', 'react', 'vite', 'postgres', 'redis']
   },
   {
     title: "Laboratory Assistant",
@@ -67,5 +72,6 @@ export const experienceData = [
       "Providing over 10 hours per week of direct assistance to students, addressing their questions, debugging code, and helping them apply theoretical concepts.",
       "Maintaining and troubleshooting hardware, software, and tools in two laboratories, ensuring seamless operation for 250 + students each semester."
     ],
+    techStack: ['javascript', 'python']
   },
 ];

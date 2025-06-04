@@ -94,23 +94,25 @@ export function Contact() {
 
         <motion.div variants={item}>
           <Link
-            href="https://linkedin.com/in/ardanngrha"
+            href="https://linkedin.com/in/ardana-nugraha"
+            target='_blank'
+            rel="noopener noreferrer"
             className="hover:opacity-70 inline-flex items-center justify-center gap-1"
           >
             <FaLinkedin />
             <p>Linkedin</p>
           </Link>
         </motion.div>
-
         <motion.div variants={item}>
           <Link
-            href="https://medium.com/@ardanngrha"
+            href="https://drive.google.com/file/d/1PggGyQtRqbX3ZpscqFS75Lq_o9Wex9_v/view?usp=sharing"
+            target='_blank'
+            rel="noopener noreferrer"
             className="hover:opacity-70 inline-flex items-center justify-center gap-1"
           >
-            <SiMedium />
-            <p>Medium</p>
+            <LuBookText />
+            <p>Resume</p>
           </Link>
-
         </motion.div>
 
       </motion.div>
@@ -121,17 +123,21 @@ export function Contact() {
       >
         <motion.div variants={item}>
           <Link
-            href="https://drive.google.com/file/d/1IuV5kTvLF6JPZ35USHUVOpCKgLiRf1_o/view?usp=sharing"
+            href="https://medium.com/@ardanngrha"
+            target='_blank'
+            rel="noopener noreferrer"
             className="hover:opacity-70 inline-flex items-center justify-center gap-1"
           >
-            <LuBookText />
-            <p>Resume</p>
+            <SiMedium />
+            <p>Medium</p>
           </Link>
+
         </motion.div>
         <motion.div variants={item}>
           <Link
             href="mailto:contact.ardana@gmail.com"
             target="_blank"
+            rel="noopener noreferrer"
             className="hover:opacity-70 inline-flex items-center justify-center gap-1"
           >
             <LuMail />

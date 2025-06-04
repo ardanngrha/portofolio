@@ -84,7 +84,7 @@ export default function Hello() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.6 }}
             >
-              I am a Software Engineer based in Indonesia.
+              I am a Software & Machine Learning Engineer based in Indonesia.
             </motion.p>
             <motion.p
               className="text-base sm:text-xl text-muted-foreground"
@@ -92,7 +92,7 @@ export default function Hello() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.7 }}
             >
-              I work with Typescript, Python, and Java to build applications.
+              I work with Python, Typescript, and Java to build applications.
             </motion.p>
           </div>
           <motion.div
