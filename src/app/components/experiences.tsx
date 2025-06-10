@@ -76,11 +76,11 @@ export function Experiences() {
             <p className="text-muted-foreground text-sm">
               {experience.title} | {experience.period}
             </p>
-            <ul className="mt-2 text-sm space-y-1">
+            {/* <ul className="mt-2 text-sm space-y-1">
               {experience.responsibilities.map((responsibility, idx) => (
                 <li key={idx}>• {responsibility}</li>
               ))}
-            </ul>
+            </ul> */}
             <div className="flex gap-2 justify-start mt-3">
               <p className="text-sm">Tech Stack: </p> {experience.techStack?.map((tech, index) => {
                 const IconComponent = techIcons[tech.toLowerCase() as TechStack];
